@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Chatbot - Home</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("{{ url_for('static', filename='home page.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #131414;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        a.button {
+            padding: 15px 30px;
+            background-color: white;
+            color: rgb(10, 9, 9);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        a.button:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to College Information Chatbot</h1>
+    <div class="button-container">
+        <a href="{{ url_for('login') }}" class="button">Login</a>  
+        <a href="{{ url_for('signup') }}" class="button">Sign Up</a>  
+    </div>
+
+</body>
+</html>
